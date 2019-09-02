@@ -2,8 +2,10 @@
 Microservices using Spring Cloud
 
 
-# api-gateway
-API Gateway
+# API Gateway
+In Microservices architecture, services communicate with each other. There are some common features that we want service call to implement which can be achieved using API Gateway
+
+Features
   - Authentication, Authorization and Security
   - Rate Limits
   - Fault Tolerance
