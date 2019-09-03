@@ -1,20 +1,20 @@
-package com.example.conversion;
+package com.example.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 import brave.sampler.Sampler;
 
 @SpringBootApplication
-@EnableFeignClients("com.example.conversion")
+@EnableZuulProxy
 @EnableDiscoveryClient
-public class CurrencyConversionServiceApplication {
+public class ZuulApiGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurrencyConversionServiceApplication.class, args);
+		SpringApplication.run(ZuulApiGatewayApplication.class, args);
 	}
 
 	@Bean
